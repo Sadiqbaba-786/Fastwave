@@ -9,7 +9,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     alert('Thank you! We will get back to you soon.');
     onClose();
   };
-
+  
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
