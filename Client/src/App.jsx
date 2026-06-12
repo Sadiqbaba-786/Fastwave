@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ShoppingCart, ArrowRight, CheckCircle, ChevronRight, ChevronLeft, Phone, Mail, MapPin } from 'lucide-react';
+import { ShoppingCart, ArrowRight, CheckCircle, ChevronRight, ChevronLeft, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 import ContactModal from './components/ContactModal';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="app-container" style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
@@ -18,19 +19,22 @@ function App() {
           <img src="/logo.png" alt="Fastwave Logo" style={{ height: '32px', objectFit: 'contain' }} />
           <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--text-dark)' }}>Fastwave</span>
         </div>
-        <ul style={{ display: 'flex', gap: '2rem' }} className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
+        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
+          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
+          <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
+          <li><a href="#blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>
         </ul>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <div style={{ position: 'relative', cursor: 'pointer' }}>
             <ShoppingCart size={24} />
             <span style={{ position: 'absolute', top: '-8px', right: '-8px', backgroundColor: 'var(--primary-color)', color: 'white', borderRadius: '50%', width: '18px', height: '18px', fontSize: '0.7rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>2</span>
           </div>
-          <button className="btn btn-primary" style={{ display: 'none' }} className="d-md-flex">Get Quote</button>
+          <button className="btn btn-primary d-none d-md-flex" style={{ display: 'none' }}>Get Quote</button>
+          <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </nav>
 
