@@ -141,6 +141,36 @@ function App() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section id="team" className="section" style={{ backgroundColor: 'var(--bg-color)' }}>
+        <div className="container">
+          <div className="text-center mb-5">
+            <div className="tagline" style={{ justifyContent: 'center' }}>Our Experts</div>
+            <h2 className="section-title">Meet the Fastwave Team</h2>
+            <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto 2rem auto' }}>The talented individuals behind our flawless digital solutions.</p>
+          </div>
+
+          <div className="grid grid-3">
+            {[
+              { name: "Sarah Jenkins", role: "Chief Executive Officer", img: "https://i.pravatar.cc/300?img=5" },
+              { name: "David Chen", role: "Lead UI/UX Designer", img: "https://i.pravatar.cc/300?img=11" },
+              { name: "Elena Rodriguez", role: "Senior Full-Stack Engineer", img: "https://i.pravatar.cc/300?img=44" }
+            ].map((employee, idx) => (
+              <div key={idx} className="chamfered shadow-wrapper">
+                <div className="chamfered-card text-center" style={{ padding: '3rem 2rem', height: '100%' }}>
+                  <div style={{ margin: '0 auto 1.5rem auto', width: '120px', height: '120px', borderRadius: '50%', overflow: 'hidden', border: '4px solid rgba(232, 122, 62, 0.2)' }}>
+                    <img src={employee.img} alt={employee.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>{employee.name}</h3>
+                  <p style={{ color: 'var(--primary-color)', fontWeight: 600, marginBottom: '1rem', fontSize: '0.9rem' }}>{employee.role}</p>
+                  <p style={{ fontSize: '0.9rem' }}>Dedicated to building intuitive, scalable applications with modern technologies.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Footer Section */}
       <section className="section" style={{ backgroundColor: 'var(--primary-color)', color: 'var(--white)', padding: '5rem 2rem', textAlign: 'center' }}>
         <div className="container">
