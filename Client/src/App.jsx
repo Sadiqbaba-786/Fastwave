@@ -152,9 +152,9 @@ function App() {
 
           <div className="grid grid-3">
             {[
-              { name: "Sarah Jenkins", role: "Chief Executive Officer", img: "https://i.pravatar.cc/300?img=5" },
-              { name: "David Chen", role: "Lead UI/UX Designer", img: "https://i.pravatar.cc/300?img=11" },
-              { name: "Elena Rodriguez", role: "Senior Full-Stack Engineer", img: "https://i.pravatar.cc/300?img=44" }
+              { name: "Saqib Ali Mir", role: "Chief Executive Officer, AI Engineer, Web Developer", img: "https://i.pravatar.cc/300?img=5", bio: "Driving Fastwave's vision with relentless energy, pioneering AI-driven innovations to conquer the digital frontier." },
+              { name: "Sadiq Baba", role: "Full-Stack Developer, Mobile Application Developer", img: "https://i.pravatar.cc/300?img=11", bio: "Architecting robust systems across web and mobile with an unstoppable drive to deliver flawless user experiences." },
+              { name: "Abdul Rehaman", role: "Front-End Developer", img: "https://i.pravatar.cc/300?img=44", bio: "Crafting highly responsive interfaces with immense passion, ensuring every interaction is powerful and unforgettable." }
             ].map((employee, idx) => (
               <div key={idx} className="chamfered shadow-wrapper">
                 <div className="chamfered-card text-center" style={{ padding: '3rem 2rem', height: '100%' }}>
@@ -163,7 +163,7 @@ function App() {
                   </div>
                   <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>{employee.name}</h3>
                   <p style={{ color: 'var(--primary-color)', fontWeight: 600, marginBottom: '1rem', fontSize: '0.9rem' }}>{employee.role}</p>
-                  <p style={{ fontSize: '0.9rem' }}>Dedicated to building intuitive, scalable applications with modern technologies.</p>
+                  <p style={{ fontSize: '0.9rem' }}>{employee.bio}</p>
                 </div>
               </div>
             ))}
@@ -195,28 +195,28 @@ function App() {
             <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
               <span style={{ fontWeight: 800, fontSize: '1.5rem' }}>Fastwave</span>
             </div>
-            <h3 style={{ fontSize: '2rem', color: 'var(--white)', marginBottom: '1rem' }}>Have a Project in Mind?<br/>Let's Build It.</h3>
+            <h3 style={{ fontSize: '2rem', color: 'var(--white)', marginBottom: '1rem' }}>Have a Project in Mind?<br />Let's Build It.</h3>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-               <input type="email" placeholder="Your email address" style={{ padding: '0.8rem', width: '60%', border: 'none', borderRadius: '4px' }} />
-               <button className="btn btn-primary">Send</button>
+              <input type="email" placeholder="Your email address" style={{ padding: '0.8rem', width: '60%', border: 'none', borderRadius: '4px' }} />
+              <button className="btn btn-primary">Send</button>
             </div>
           </div>
           <div>
-             <h4 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Company</h4>
-             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-               <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>About Us</a></li>
-               <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Our Services</a></li>
-               <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Projects</a></li>
-               <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Careers</a></li>
-             </ul>
+            <h4 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Company</h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+              <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>About Us</a></li>
+              <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Our Services</a></li>
+              <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Projects</a></li>
+              <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)' }}>Careers</a></li>
+            </ul>
           </div>
           <div>
-             <h4 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Contact Info</h4>
-             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-               <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><Phone size={18} /> +1 234 456 7890</li>
-               <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><Mail size={18} /> info@fastwave.com</li>
-               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><MapPin size={18} /> 123 Digital Ave, Tech Park, CA 90210</li>
-             </ul>
+            <h4 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Contact Info</h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><Phone size={18} /> +1 234 456 7890</li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><Mail size={18} /> info@fastwave.com</li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}><MapPin size={18} /> 123 Digital Ave, Tech Park, CA 90210</li>
+            </ul>
           </div>
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
