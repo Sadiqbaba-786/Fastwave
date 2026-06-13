@@ -82,6 +82,14 @@ img {
   transition: all 0.3s ease;
   border: none;
   gap: 0.5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
 }
 
 .btn:active {
