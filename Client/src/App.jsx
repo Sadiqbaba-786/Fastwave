@@ -40,15 +40,15 @@ function App() {
 
       {/* Hero Section */}
       <header id="home" className="section" style={{ paddingTop: '10rem', paddingBottom: '8rem', color: 'var(--white)' }}>
-        <div className="container">
-          <div className="tagline" style={{ color: 'var(--white)' }}>Welcome to Fastwave</div>
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+          <div className="tagline" style={{ color: 'var(--white)', justifyContent: 'center' }}>Welcome to Fastwave</div>
           <h1 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', marginBottom: '2rem', maxWidth: '800px', color: 'var(--white)' }}>
             Focused on delivering <span className="text-primary">thoughtful design</span> and flawless execution.
           </h1>
           <p className="mb-4" style={{ fontSize: '1.1rem', maxWidth: '600px', color: 'rgba(255,255,255,0.8)' }}>
             Fastwave Pvt. Ltd. is a premier software company specializing in designing intuitive web applications. We blend strategic thinking with cutting-edge technology to bring your digital vision to life.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', marginBottom: '4rem', justifyContent: 'center' }}>
             <button className="btn btn-primary" onClick={() => setIsContactOpen(true)}>Start a Project</button>
             <button className="btn" style={{ backgroundColor: 'var(--white)', color: 'var(--primary-color)', fontWeight: 'bold' }}>Our Services</button>
           </div>
@@ -63,6 +63,62 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* Empowering Section */}
+      <section className="section" style={{ backgroundColor: 'transparent', color: 'var(--white)', padding: '6rem 0' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '5rem', flexWrap: 'wrap' }}>
+          {/* Left Text Content */}
+          <div style={{ flex: '1 1 450px' }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: '800', marginBottom: '2rem', lineHeight: '1.2' }}>
+              Empowering Businesses<br />with Smart Digital<br />Solutions
+            </h2>
+            <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.8' }}>
+              At Fastwave, we design, develop, and deliver powerful digital solutions — from dynamic web applications to robust, scalable full-stack architectures. Our mission is simple: to make technology work seamlessly for your business. Backed by cutting-edge technology, AI-driven solutions, and a customer-first approach, we help you innovate faster, operate smarter, and scale with confidence.
+            </p>
+          </div>
+
+          {/* Right Image Content */}
+          <div style={{ flex: '1 1 450px', position: 'relative' }}>
+            {/* Main Image Container */}
+            <div style={{ 
+              borderRadius: '1rem', 
+              overflow: 'hidden', 
+              border: '1px solid rgba(255,255,255,0.05)',
+              padding: '1.5rem',
+              backgroundColor: 'rgba(255,255,255,0.02)'
+            }}>
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Team working" 
+                style={{ width: '100%', borderRadius: '0.5rem', display: 'block', objectFit: 'cover', height: '400px' }} 
+              />
+            </div>
+
+            {/* Bottom Left Badge */}
+            <div style={{
+              position: 'absolute',
+              bottom: '-1.5rem',
+              left: '-1.5rem',
+              backgroundColor: '#1e293b',
+              color: 'white',
+              padding: '1rem 1.5rem',
+              borderRadius: '0.8rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.8rem',
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)',
+              zIndex: 2
+            }}>
+              <div style={{ width: '10px', height: '10px', backgroundColor: '#10b981', borderRadius: '50%' }}></div>
+              <div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 'bold', lineHeight: '1.2' }}>Live Support</div>
+                <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>24/7 Available</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section id="about" className="section" style={{ backgroundColor: 'var(--bg-color)' }}>
